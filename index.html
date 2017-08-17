@@ -53,9 +53,9 @@
 		<main class="container">
 			
 			<section class="slider">
-				<input type="radio" id="slide1">
-				<input type="radio" id="slide2">
-				<input type="radio" id="slide3">
+				<input type="radio" name="slide" id="slide1" checked>
+				<input type="radio" name="slide" id="slide2">
+				<input type="radio" name="slide" id="slide3">
 					<div class="index-slider">
 						<div class="slide1">
 							<img src="img/slide1.jpg" width="670" height="580" alt="Крем-брюле">
@@ -154,16 +154,18 @@
 			<section class="map">
 				<h2 class="visually-hidden">Мы на карте.</h2>
 					<img src="img/map.jpg" width="1200" height="430" alt="Карта">
-						<address class="feedback">
-							<img src="img/feedback-bg.png" width="305" height="305" alt="Обратная связь">
-							<p>Адрес главного офиса<br>
-							и офлайн магазина:</p>
-							<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-							<p>Для заказов по телефону</p>
-							<a href="tel:88124502525">8 812 450-25-25</a>
-							<p>(c 10 до 20 ежедневно)</p>
-							<a class="button button-feedback" href="#">Форма обратной связи</a>
-						</address>
+							<div class="feedback">
+								<img src="img/feedback-bg.png" width="305" height="305" alt="Обратная связь">
+								<p>Адрес главного офиса<br>
+								и офлайн магазина:</p>
+								<address class="feedback-info">
+									<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+									<p>Для заказов по телефону</p>
+									<a href="tel:88124502525">8 812 450-25-25</a>
+									<p>(c 10 до 20 ежедневно)</p>
+								</address>
+								<a class="button button-feedback" href="#">Форма обратной связи</a>	
+							</div>
 			</section>
 		</main>
 

@@ -27,42 +27,49 @@
 				<h2 class="visually-hidden">Меню пользователя</h2>
 					<div class="head-search">
 						<a class="button-search" href="#">Открыть поиск</a>
-						<input type="text" name="search" value="" placeholder="Что ищем?">
+							<div class="search">
+								<input type="text" name="search" value="" placeholder="Что ищем?">
+							</div>
 					</div>
 					<div class="head-user">
-						<a class="user" href="#">Вход</a>
-							<form class="user-form" action="https://echo.htmlacademy.ru" method="post">
-								<input type="email" name="email" value="" placeholder="Электронная почта">
-							<input type="password" name="password" value="" placeholder="Пароль">
-								<button class="button button-enter-user">Войти</button>
-								<p>
-									<a href="#">Забыли пароль?</a>
-									<a href="#">Новая регистрация</a>
-								</p>
-						</form>
+						<a class="button-user" href="#">Вход</a>
+							<div class="user">
+								<form class="user-form" action="https://echo.htmlacademy.ru" method="post">
+									<input type="email" name="email" value="" placeholder="Электронная почта">
+								<input type="password" name="password" value="" placeholder="Пароль">
+									<button class="button button-enter-user" type="submit">Войти</button>
+									<p>
+										<a href="#">Забыли пароль?</a>
+										<a href="#">Новая регистрация</a>
+									</p>
+								</form>
+							</div>
 					</div>
 					<div class="head-basket">
 						<a class="basket basket-full" href="#">2 товара</a>
-							<table>
-								<tr>
-									<th>x</th>
-									<th><img src="img/pic-plombir" width="35" height="35" alt="Плобмир"></th>
-									<th>Пломбир с апельсиновым джемом</th>
-									<th>1,5 кг х 200 руб.</th>
-									<th>300 руб.</th>
-								</tr>
-								<tr>
-									<th>x</th>
-									<th><img src="img/pic-strawberry" width="35" height="35" alt="Клубничное"></th>
-									<th>Клубничный пломбир с присыпкой 
-	из белого шоколада</th>
-									<th>1,5 кг х 300 руб.</th>
-									<th>450 руб.</th>
-								</tr>
-							</table>
+							<div class="basket-table">
+								<form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
+									<table>
+										<tr>
+											<td>x</td>
+											<td><img src="img/pic-plombir" width="35" height="35" alt="Плобмир"></td>
+											<td>Пломбир с апельсиновым джемом</td>
+											<td>1,5 кг х 200 руб.</td>
+											<td>300 руб.</td>
+										</tr>
+										<tr>
+											<td>x</td>
+											<td><img src="img/pic-strawberry" width="35" height="35" alt="Клубничное"></td>
+											<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+											<td>1,5 кг х 300 руб.</td>
+											<td>450 руб.</td>
+										</tr>
+									</table>
+								</form>
+							</div>
 							<hr>
 							<p><b>Итого: 750 руб.</b></p>
-							<button class="button button-offer">Оформить заказ</button>
+							<button class="button button-offer" type="submit">Оформить заказ</button>
 					</div>
 					<p class="work-time">c 10 до 20, ежедневно
 					<a href="tel:88124502525">8 812 450-25-25</a></p>
