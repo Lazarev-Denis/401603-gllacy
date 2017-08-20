@@ -3,6 +3,7 @@
   	<head>
     	<meta charset="utf-8">
     	<title>Магазин мороженого Глейси</title>
+    	<link href="css/style.css" rel="stylesheet">
   	</head>
  	
  	<body>
@@ -58,18 +59,18 @@
 				<input type="radio" name="slide" id="slide3">
 					<div class="index-slider">
 						<div class="slide1">
-							<img src="img/slide1.jpg" width="670" height="580" alt="Крем-брюле">
-							<h2>Крем-брюле и пломбир с малиновым джемом</h2>
+							<img src="img/slide1.png" width="650" height="881" alt="Крем-брюле">
+							<h2 class="slide-caption">Крем-брюле и пломбир с малиновым джемом</h2>
 							<a href="#">Давайте оба!</a>
 						</div>
 						<div class="slide2">
-							<img src="img/slide2.jpg" width="670" height="580" alt="Пломбир и сорбет">
-							<h2>Шоколадный пломбир и лимонный сорбет</h2>
+							<img src="img/slide2.png" width="650" height="881" alt="Пломбир и сорбет">
+							<h2 class="slide-caption">Шоколадный пломбир и лимонный сорбет</h2>
 							<a href="#">Давайте оба!</a>
 						</div>
 						<div class="slide3">
-							<img src="img/slide3.jpg" width="670" height="580" alt="Пломбир и щербет">
-							<h2>Пломбир с помадкой и клубничный щербет</h2>
+							<img src="img/slide3.png" width="650" height="881" alt="Пломбир и щербет">
+							<h2 class="slide-caption">Пломбир с помадкой и клубничный щербет</h2>
 							<a href="#">Давайте оба!</a>
 						</div>
 					</div>
@@ -82,40 +83,42 @@
 
 			<article class="promo1">
 				<h2 class="visually-hidden">Акция1</h2>
-					<h2>Малинка даром!</h2>
+					<h2 class="promo-caption">Малинка даром!</h2>
 					<p>При покупки 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 					<a class="button" href="#">Хочу варенье!</a>
+					<img src="img/malina-bg.jpg" width="420" height="229" alt="Малина">
 			</article>
 			<article class="promo2">
 				<h2 class="visually-hidden">Акция1</h2>
-					<h2>Шоколадки даром!</h2>
+					<h2 class="promo-caption">Шоколадки даром!</h2>
 					<p>При покупки 2 кг пломбира, добавим в ваш заказ вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 					<a class="button" href="#">Хочу шоколадки!</a>
+					<img src="img/chokolate-bg.jpg" width="420" height="229" alt="Шоколадная стружка">
 			</article>
 
 			<section class="ice-cream-list">
-				<h2 class="visually-hidden"> Хиты мороженого</h2>
+				<h2 class="visually-hidden">Хиты мороженого</h2>
 					<ul class="ice-cream-index">
 						<li class="ice-cream-hit">
-							<img src="img/ice-cream-orange.jpg" width="270"	height="270" alt="Апельсиновое мороженое">
+							<img src="img/icehit1.png" width="200"	height="200" alt="Апельсиновое мороженое">
 							<img src="img/hit.svg" width="60" height="60" alt="Хит">
 							<b>310 ₽<sub>/кг</sub></b>
 							<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
 						</li>
 						<li class="ice-cream-hit">
-							<img src="img/ice-cream-coffee.jpg" width="270"	height="270" alt="Кофейное мороженое">
+							<img src="img/icehit2.png" width="200"	height="200" alt="Кофейное мороженое">
 							<img src="img/hit.svg" width="60" height="60" alt="Хит">
 							<b>380 ₽<sub>/кг</sub></b>
 							<p>Сливочно-кофейное с кусочками шоколада</p>
 						</li>
 						<li class="ice-cream-hit">
-							<img src="img/ice-cream-strawberry.jpg" width="270"	height="270" alt="Клубничное мороженое">
+							<img src="img/icehit3.png" width="200"	height="200" alt="Клубничное мороженое">
 							<img src="img/hit.svg" width="60" height="60" alt="Хит">
 							<b>355 ₽<sub>/кг</sub></b>
 							<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
 						</li>
 						<li class="ice-cream-hit">
-							<img src="img/ice-cream-caramel.jpg" width="270"	height="270" alt="Карамельное мороженое">
+							<img src="img/icehit4.png" width="200"	height="200" alt="Карамельное мороженое">
 							<img src="img/hit.svg" width="60" height="60" alt="Хит">
 							<b>415 ₽<sub>/кг</sub></b>
 							<p>Сливочное крем-брюле с карамельной подливкой</p>
@@ -125,6 +128,7 @@
 
 			<section class="info-gllacy">
 				<h2 class="visually-hidden"> Инфотмация о преимуществах</h2>
+				<img src="img/wafer-bg.jpg" width="860" height="372" alt="Вафельный фон">
 				<b>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b>
 				<ul class="features">
 					<li class="features-1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -138,6 +142,7 @@
 				<h2 class="visually-hidden">Сервировка щербетов</h2>
 					<p>Новое в нашем блоге</p>
 					<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+					<img src="img/strawberry-bg.jpg" width="420" height="220" alt="Щербеты">
 			</article>
 
 			<section class="subscription">
@@ -149,13 +154,15 @@
 							<button class="button" type="submit">Отправить</button>
 						</span>
 					</form>
+				<img src="img/post-bg.png" width="420" height="220" alt="Почта">
+				<img src="img/post-bg1.png" width="410" height="211" alt="Почта1">
 			</section>
 
 			<section class="map">
 				<h2 class="visually-hidden">Мы на карте.</h2>
-					<img src="img/map.jpg" width="1200" height="430" alt="Карта">
+					<img src="img/map-bg.jpg" width="900" height="430" alt="Карта">
 							<div class="feedback">
-								<img src="img/feedback-bg.png" width="305" height="305" alt="Обратная связь">
+								<img src="img/feedback-bg.png" width="302" height="305" alt="Обратная связь">
 								<p>Адрес главного офиса<br>
 								и офлайн магазина:</p>
 								<address class="feedback-info">
@@ -196,7 +203,7 @@
 		</footer>
 
 		<section class="modal modal-feedback">
-			<h2>Мы обязательно вам ответим!</h2>
+			<h2 class="feedback-caption">Мы обязательно вам ответим!</h2>
 				<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
 						<input class="user-name" type="text" name="name" placeholder="Как вас зовут?">
