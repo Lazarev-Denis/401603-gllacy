@@ -29,13 +29,16 @@
 				<h2 class="visually-hidden">Меню пользователя</h2>
 				<div class="head-search">
 					<a class="button-search" href="#">Открыть поиск</a>
-					<input type="text" name="search" value="" placeholder="Что ищем?">
+					<input id="input-search" type="text" name="search" value="" placeholder="Что ищем?">
+					<label class="visually-hidden" for="input-search">Поле поиска</label>
 				</div>
 				<div class="head-user">
 					<a class="user" href="#">Вход</a>
 						<form class="user-form" action="https://echo.htmlacademy.ru" method="post">
-							<input type="email" name="email" value="" placeholder="Электронная почта">
-							<input type="password" name="password" value="" placeholder="Пароль">
+							<label class="visually-hidden" for="enter-email">Электронная почта</label>
+							<input id="enter-email" type="email" name="email" value="" placeholder="Электронная почта">
+							<label class="visually-hidden" for="enter-password">Пароль</label>
+							<input id="enter-password" type="password" name="password" value="" placeholder="Пароль">
 							<button class="button button-enter-user">Войти</button>
 							<p>
 								<a href="#">Забыли пароль?</a>
@@ -44,7 +47,7 @@
 						</form>
 				</div>
 				<div class="head-basket">
-					<a href="#">Пусто</a>
+					<a id="empty-basked" href="#">Пусто</a>
 				</div>
 				<p class="work-time">c 10 до 20, ежедневно
 				<a href="tel:88124502525">8 812 450-25-25</a></p>
@@ -150,7 +153,8 @@
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 					<form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
 						<span>
-							<input type="email" name="email" value="" placeholder="Электронная почта">
+							<label class="visually-hidden" for="email-subscription">Ваша электронная почта</label>
+							<input id="email-subscription" type="email" name="email" value="" placeholder="Электронная почта">
 							<button class="button" type="submit">Отправить</button>
 						</span>
 					</form>
@@ -160,7 +164,7 @@
 
 			<section class="map">
 				<h2 class="visually-hidden">Мы на карте.</h2>
-					<img src="img/map-bg.jpg" width="900" height="430" alt="Карта">
+					<img src="img/map-bg.jpg" width="900" height="430" alt="Адрес главного офиса и офлайн магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
 							<div class="feedback">
 								<img src="img/feedback-bg.png" width="302" height="305" alt="Обратная связь">
 								<p>Адрес главного офиса<br>
@@ -206,16 +210,19 @@
 			<h2 class="feedback-caption">Мы обязательно вам ответим!</h2>
 				<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
-						<input class="user-name" type="text" name="name" placeholder="Как вас зовут?">
+						<label class="visually-hidden" for="feedback-user">Ваше имя</label>
+						<input class="user-name" id="feedback-user" type="text" name="name" placeholder="Как вас зовут?">
 					</p>
 					<p>
-						<input class="email" type="text" name="email" placeholder="Ваша почта для ответа?">
+						<label class="visually-hidden" for="feedback-email">Ваша почта</label>
+						<input id="feedback-email" class="email" type="text" name="email" placeholder="Ваша почта для ответа?">
 					</p>
 					<p>
-						<textarea rows="10" cols="45" name="text" placeholder="Напишите что-нибудь..."></textarea>
+						<label class="visually-hidden" for="feedback-question">Ваш вопрос, отзыв, пожелание.</label>
+						<textarea id="feedback-question" rows="10" cols="45" name="text" placeholder="Напишите что-нибудь..."></textarea>
 					</p>
 					<p><button class="button" type="submit">Отправить</button></p>
-					<span class="modal-close">x</span>	
+					<button class="modal-close" type="button">Закрыть</button>
 				</form>
 		</section>
   	</body>

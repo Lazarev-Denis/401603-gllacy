@@ -29,15 +29,18 @@
 					<div class="head-search">
 						<a class="button-search" href="#">Открыть поиск</a>
 							<div class="search">
-								<input type="text" name="search" value="" placeholder="Что ищем?">
+								<input id="input-search" type="text" name="search" value="" placeholder="Что ищем?">
+								<label class="visually-hidden" for="input-search">Поле поиска</label>
 							</div>
 					</div>
 					<div class="head-user">
 						<a class="button-user" href="#">Вход</a>
 							<div class="user">
 								<form class="user-form" action="https://echo.htmlacademy.ru" method="post">
-									<input type="email" name="email" value="" placeholder="Электронная почта">
-								<input type="password" name="password" value="" placeholder="Пароль">
+									<label class="visually-hidden" for="enter-email">Электронная почта</label>
+									<input id="enter-email" type="email" name="email" value="" placeholder="Электронная почта">
+									<label class="visually-hidden" for="enter-password">Пароль</label>
+									<input id="enter-password" type="password" name="password" value="" placeholder="Пароль">
 									<button class="button button-enter-user" type="submit">Войти</button>
 									<p>
 										<a href="#">Забыли пароль?</a>
@@ -52,14 +55,14 @@
 								<form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
 									<table>
 										<tr>
-											<td><img src="img/cross-small.svg" width="10" height="10" alt="Плобмир"></td>
+											<td><img src="img/cross-small.svg" width="10" height="10" alt="Удалить"></td>
 											<td><img src="img/icebasket1.png" width="33" height="33" alt="Плобмир"></td>
 											<td>Пломбир с апельсиновым джемом</td>
 											<td>1,5 кг х 200 руб.</td>
 											<td>300 руб.</td>
 										</tr>
 										<tr>
-											<td><img src="img/cross-small.svg" width="10" height="10" alt="Клубничное"></td>
+											<td><img src="img/cross-small.svg" width="10" height="10" alt="Удалить"></td>
 											<td><img src="img/icebasket2.png" width="33" height="33" alt="Клубничное"></td>
 											<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 											<td>1,5 кг х 300 руб.</td>
@@ -89,7 +92,8 @@
 						<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 							 <fieldset>
 							 	<legend class="filter-sorting">Сортировка:</legend>
-							 		<select class="sorting">
+							 	<label class="visually-hidden" for="select-sorting">Сортировка</label>
+							 		<select class="sorting" id="select-sorting">
 							 			<option value="popular">по популярности</option>
 							 			<option value="cheap">сначала недорогие</option>
 							 			<option value="expensive">сначала дорогие</option>
@@ -100,7 +104,7 @@
 							 	<legend class="filterprice">Цена: 100 руб. - 500 руб.</legend>
 							 		<div class="price">
 							 			<label for="price">Цена:</label>
-										<input type="range" id="price" min="0" value="100"  max="800" step="10">
+										<input type="range" id="price" min="0" value="100" max="800" step="10">
 							 		</div>
 							 </fieldset>
 							 <fieldset>
