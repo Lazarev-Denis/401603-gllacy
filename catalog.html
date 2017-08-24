@@ -29,8 +29,10 @@
 					<div class="head-search">
 						<a class="button-search" href="#">Открыть поиск</a>
 							<div class="search">
-								<input id="input-search" type="text" name="search" value="" placeholder="Что ищем?">
-								<label class="visually-hidden" for="input-search">Поле поиска</label>
+								<form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+									<input id="input-search" type="text" name="search" value="" placeholder="Что ищем?">
+									<label class="visually-hidden" for="input-search">Поле поиска</label>
+								</form>
 							</div>
 					</div>
 					<div class="head-user">
@@ -55,14 +57,14 @@
 								<form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
 									<table>
 										<tr>
-											<td><img src="img/cross-small.svg" width="10" height="10" alt="Удалить"></td>
+											<td><button class="exit-button" type="button">Удалить</button></td>
 											<td><img src="img/icebasket1.png" width="33" height="33" alt="Плобмир"></td>
 											<td>Пломбир с апельсиновым джемом</td>
 											<td>1,5 кг х 200 руб.</td>
 											<td>300 руб.</td>
 										</tr>
 										<tr>
-											<td><img src="img/cross-small.svg" width="10" height="10" alt="Удалить"></td>
+											<td><button class="exit-cross" type="button">Удалить</button></td>
 											<td><img src="img/icebasket2.png" width="33" height="33" alt="Клубничное"></td>
 											<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 											<td>1,5 кг х 300 руб.</td>
@@ -135,7 +137,7 @@
 							 				<label for="jam">джемы</label>
 							 		</div>
 							 </fieldset>
-							 <button class="filter-save">Применить</button>
+							 <button class="filter-save" type="submit">Применить</button>
 						</form>
 				</section>
 
