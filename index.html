@@ -13,7 +13,6 @@
     <input type="radio" id="btn-2" name="toggle">
     <input type="radio" id="btn-3" name="toggle">
  	<div class="site-wrapper">
- 		<div class="content-wrapper">
  		<div class="header-container">
 			<header class="main-header">
 				<div class="logo-menu">
@@ -48,7 +47,8 @@
 							<div class="search-window">
 								<div class="search-window-content">
 									<form action="https://echo.htmlacademy.ru" method="post">
-											<input id="input-search" type="search" name="search" value="" placeholder="Что ищем?">
+										<input id="input-search" type="search" name="search" value="" placeholder="Что ищем?">
+											<label class="input-name" for="input-search">Что ищем?</label>
 											<label class="visually-hidden" for="input-search">Поле поиска</label>
 									</form>
 								</div>
@@ -62,17 +62,19 @@
 							<div class="user-window">
 								<div class="user-window-content">
 									<form action="https://echo.htmlacademy.ru" method="post">
-										<input id="enter-email" type="email" name="email" value="" placeholder="Электронная почта" required>
-											<label class="hidden-label" for="enter-email">
-												<span>Электронная почта</span>
-											</label>
-										<input id="enter-password" type="password" name="password" value="" placeholder="Пароль" required>
-											<label class="visually-hidden" for="enter-password">Пароль</label>
+										<input id="enter-email" class="enter-email" type="email" name="email" value="" placeholder="Электронная почта" required>
+											<label class="input-email" for="enter-password">Электронная почта</label>
+											<label class="visually-hidden" for="enter-email">Электронная почта</label>
+										<input id="enter-password" class="enter-password" type="password" name="password" value="" placeholder="Пароль" required>
+											<label class="input-password" for="enter-password">Пароль</label>
+											<label class="visually-hidden visibility" for="enter-password">Пароль</label>
+										<div class="inner-login">
 										<button class="button button-user-enter" type="submit" value="Войти">Войти</button>
 										<p>
 											<a href="#">Забыли пароль?</a>
 											<a href="#">Новая регистрация</a>
 										</p>
+										</div>
 									</form>
 								</div>
 							</div>
@@ -84,7 +86,7 @@
 						</div>
 					</div>
 					<div class="info-menu">
-							<p class="work-time">c 10 до 20, ежедневно
+							<p class="work-time">С 10 до 20, ежедневно
 							<span><a class="tel" href="tel:88124502525">8 812 450-25-25</a></span></p>
 					</div>
 				</section>		
@@ -92,6 +94,7 @@
 		</div>
 		<main class="container">
 			<section class="slider">
+				<h2 class="visually-hidden">Слайд Глейси</h2>
 				<div class="slide" id="slide1">
             		<div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
             		<a class="slide-btn" href="#">Давайте оба!</a>
@@ -112,6 +115,7 @@
 			</section>
 
 			<section class="promo">
+				<h2 class="visually-hidden">Акции Глейси</h2>
 				<article class="promo1">
 					<h2 class="visually-hidden">Акция1</h2>
 						<h2 class="promo-caption">Малинка даром!</h2>
@@ -135,7 +139,7 @@
 									<img src="img/ice1.png" width="267"	height="267" alt="Апельсиновое мороженое">
 								</a>
 								<div class="item-price">
-									<span>310</span><img src="img/ruble.svg"><span class="min-kg">/кг</span>
+									<span>310</span><img src="img/ruble.svg" alt="₽"><span class="min-kg">/кг</span>
 								</div>
 								<a class="item-caption" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 								<a class="button item-button" href="#">Быстрый просмотр</a>
@@ -147,7 +151,7 @@
 									<img src="img/ice2.png" width="267"	height="267" alt="Кофейное мороженое">
 								</a>
 								<div class="item-price">
-									<span>380</span><img src="img/ruble.svg"><span>/кг</span>
+									<span>380</span><img src="img/ruble.svg" alt="₽"><span>/кг</span>
 								</div>
 								<a class="item-caption" href="#">Сливочно-кофейное с кусочками шоколада</a>
 								<a class="button item-button" href="#">Быстрый просмотр</a>
@@ -159,7 +163,7 @@
 									<img src="img/ice3.png" width="267"	height="267" alt="Клубничное мороженое">
 								</a>
 								<div class="item-price">
-									<span>355</span><img src="img/ruble.svg"><span>/кг</span>
+									<span>355</span><img src="img/ruble.svg" alt="₽"><span>/кг</span>
 								</div>
 								<a class="item-caption" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 								<a class="button item-button" href="#">Быстрый просмотр</a>
@@ -171,7 +175,7 @@
 									<img src="img/ice4.png" width="267"	height="267" alt="Карамельное мороженое">
 								</a>
 								<div class="item-price">
-									<span>415</span><img src="img/ruble.svg"><span>/кг</span>
+									<span>415</span><img src="img/ruble.svg" alt="₽"><span>/кг</span>
 								</div>
 								<a class="item-caption" href="#">Сливочное крем-брюле с карамельной подливкой</a>
 								<a class="button item-button" href="#">Быстрый просмотр</a>
@@ -209,8 +213,8 @@
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 								<form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
 									<span class="email-sub">
-										<label class="visually-hidden" for="email-subscription">Ваша электронная почта</label>
-										<input id="email-subscription" type="email" name="email" value="" placeholder="Электронная почта" required>
+										<input id="email-subscription" class="enter-email" type="email" name="email" value="" placeholder="Электронная почта" required>
+											<label class="visually-hidden visibility" for="email-subscription">Ваша электронная почта</label>
 										<button class="button" type="submit">Отправить</button>
 									</span>
 								</form>
@@ -220,6 +224,9 @@
 
 			<section class="map">
 				<h2 class="visually-hidden">Мы на карте.</h2>
+				<div class="map-pin">
+					<img src="img/pin-shadow.png" alt="Мы тут">
+				</div>>
 				<div class="map-container">
 					<div class="info-map">
 						<p>Адрес главного офиса<br>
@@ -283,27 +290,25 @@
 				</div>
 		</footer>
 
-		<!--<section class="modal modal-feedback">
+		<section class="modal modal-feedback">
 			<h2 class="feedback-caption">Мы обязательно вам ответим!</h2>
 				<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
 						<label class="visually-hidden" for="feedback-user">Ваше имя</label>
-						<input class="user-name" id="feedback-user" type="text" name="name" placeholder="Как вас зовут?">
+						<input id="feedback-user" class="user-feedback" type="text" name="name" placeholder="Как вас зовут?">
 					</p>
 					<p>
 						<label class="visually-hidden" for="feedback-email">Ваша почта</label>
-						<input id="feedback-email" class="email" type="text" name="email" placeholder="Ваша почта для ответа?">
+						<input id="feedback-email" class="email-feedback" type="text" name="email" placeholder="Ваша почта для ответа?">
 					</p>
 					<p>
 						<label class="visually-hidden" for="feedback-question">Ваш вопрос, отзыв, пожелание.</label>
-						<textarea id="feedback-question" rows="10" cols="45" name="text" placeholder="Напишите что-нибудь..."></textarea>
+						<textarea class="text-feedback" id="feedback-question" rows="10" cols="45" name="text" placeholder="Напишите что-нибудь..."></textarea>
 					</p>
-					<p><button class="button" type="submit">Отправить</button></p>
-					<button class="modal-close" type="button">Закрыть</button>
+					<p><button class="button btn-fb" type="submit">Отправить</button></p>
 				</form>
-		</section>-->
-		
-		</div>
+				<button class="modal-close" type="button">Закрыть</button>
+		</section>
 	</div>
 
   	</body>
