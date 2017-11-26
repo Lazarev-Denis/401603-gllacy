@@ -37,7 +37,8 @@ body > input[type="radio"] {
 	font-weight: bold;
 }
 
-.item-caption {
+.item-caption-for-hit a,
+.item-caption a{
 	font-size: 16px;
 	line-height: 22px;
 	color: #ffffff;
@@ -70,15 +71,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper::before {
-	background-image: url("slide-2.png");
-}
-
-.site-wrapper::before {
-	img;
+	background-image: url("../img/slide2.png");
 }
 
 .site-wrapper::after {
-	background-image: url("slide-3.png");
+	background-image: url("../img/slide3.png");
 }
 
 .site-wrapper {
@@ -134,6 +131,7 @@ input[type="radio"].visually-hidden {
 
 .button {
     display: inline-block;
+    margin-right: 10px;
     padding: 10px 22px;
     font-weight: bold;
     font-size: 18px;
@@ -260,7 +258,7 @@ input[type="radio"].visually-hidden {
 	padding:0;
 	margin: 0;
 	margin-top: 22px;
-	margin-left: 9px;
+	margin-left: 8px;
 }
 
 .head-sub-menu {
@@ -444,7 +442,7 @@ li .active-nav {
 	opacity: 1;
 }
 
-input[type=search] {
+.input-search {
 	display: block;
 	width: 100%;
     box-sizing: border-box;
@@ -459,7 +457,7 @@ input[type=search] {
     box-shadow: none;
 }
 
-input[type=search]:hover {
+.input-search:hover {
     padding: 9px 13px;
     border: 2px solid rgba(154,154,154,.52);
 }
@@ -468,19 +466,19 @@ input[type=search]:hover {
 	position: relative;
 }
 
-input[type=search]:focus + label {
+.label-search {
 	position: absolute;
-	top: 5px;
-	left: 31px;
-	visibility: visible;
+	visibility: hidden;
+	top: 7px;
+	left: 29px;
 	color: rgba(91, 157, 223, 1);
 	font-size: 11px;
 	line-height: 13px;
 	font-weight: medium;
 }
 
-.input-name {
-	visibility: hidden;
+.input-search:focus + label {
+	visibility: visible;
 }
 
 /* Меню входа */
@@ -552,7 +550,7 @@ input[type=search]:focus + label {
 	align-items: center;
 	width: 245px;
 	height: 45px;
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-left: 20px;
 }
 
@@ -566,22 +564,26 @@ input[type=search]:focus + label {
 	opacity: 1;
 }
 
-input[type=email]:focus + label {
+.label-email {
 	position: absolute;
 	top: 5px;
 	left: 31px;
-	visibility: visible;
+	visibility: hidden;
 	color: rgba(91, 157, 223, 1);
 	font-size: 11px;
 	line-height: 13px;
 	font-weight: medium;
 }
 
-input[type=password]:focus + label {
-	position: absolute;
-	top: 67px;
-	left: 31px;
+.input-email:focus + label {
 	visibility: visible;
+}
+
+.label-password {
+	position: absolute;
+	top: 70px;
+	left: 31px;
+	visibility: hidden;
 	color: rgba(91, 157, 223, 1);
 	font-size: 11px;
 	line-height: 13px;
@@ -589,19 +591,25 @@ input[type=password]:focus + label {
 	height: 150px;
 }
 
-.enter-email {
+.input-password:focus + label {
+	visibility: visible;
+}
+
+.input-email {
     margin-top: 20px;
 }
 
-.enter-password {
-	margin-top: 10px;
+.input-password {
+	margin-top: 20px;
 }
 
-.enter-email,
-.enter-password,
-.user-feedback,
-.email-feedback {
+.input-email,
+.input-password,
+.input-subscription,
+.input-user-feedback,
+.input-email-feedback {
 	width: 240px;
+	height: 44px;
     box-sizing: border-box;
     padding: 10px 14px;
     overflow: hidden;
@@ -613,19 +621,20 @@ input[type=password]:focus + label {
     box-shadow: none;
 }
 
-.enter-email:hover,
-.enter-password:hover,
-.user-feedback:hover,
-.email-feedback:hover {
+.input-email:hover,
+.input-password:hover,
+.input-subscription:hover,
+.input-user-feedback:hover,
+.input-email-feedback:hover {
     padding: 9px 13px;
     border: 2px solid rgba(154,154,154,.52);
 }
 
-.user-feedback {
+.input-user-feedback {
 	width: 267px;
 }
 
-.text-feedback {
+.input-text-feedback {
 	width: 428px;
 	box-sizing: border-box;
 	padding: 15px 10px;
@@ -638,7 +647,7 @@ input[type=password]:focus + label {
     box-shadow: none;
 }
 
-.text-feedback:hover {
+.input-text-feedback:hover {
 	padding: 14px 9px;
     border: 2px solid rgba(154,154,154,.52);
 }
@@ -652,19 +661,22 @@ input[type=password]:focus + label {
     line-height: 24px;
     color: #323232;
     font-weight: medium;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,.3);
-}
+    text-decoration: underline;
+ }
 
-.input-email,
-.input-password {
-	visibility: hidden;
+ .user-window-content a:hover,
+ .user-window-content a:active {
+	color: #ffbc9e;
 }
 
 /* Корзина */
 
 .head-basket span {
-	color: #fff;
+	color: #ffffff;
+}
+
+.basket-red {
+	fill: red;
 }
 
 .button-empty-basket {
@@ -682,7 +694,7 @@ input[type=password]:focus + label {
 
 .button-empty-basket svg { 
 	position: absolute;
-	left: 17px;
+	left: 16px;
 	top: 6px;
 }
 
@@ -755,14 +767,14 @@ input[type=password]:focus + label {
 
 .promo1 h2,
 .promo2 h2 {
-	margin-left: 18px;
+	margin-left: 19px;
 	margin-top: 16px;
 }
 
 .promo1 p,
 .promo2 p {
-	margin-top: -15px;
-	margin-left: 19px;
+	margin-top: -14px;
+	margin-left: 20px;
 	font-size: 18px;
 	line-height: 22px;
 	width: 515px;
@@ -772,12 +784,12 @@ input[type=password]:focus + label {
 
 .promo1 a {
 	margin-left: 375px;
-	margin-top: 27px;
+	margin-top: 28px;
 }
 
 .promo2 a {
 	margin-left: 350px;
-	margin-top: 26px;
+	margin-top: 27px;
 }
 
 /* Краткий каталог */
@@ -787,6 +799,7 @@ input[type=password]:focus + label {
 	margin-top: 25px;
 	width: 1146px;
 	margin: 0 auto;
+	text-decoration: none;
 }
 
 .ice-cream-catalog {
@@ -878,27 +891,31 @@ input[type=password]:focus + label {
 
 .catalog-image-container .item-button {
 	text-decoration: none;
+	display: none;
 }
 
-.catalog-image-container .item-caption {
+.item-caption-for-hit a,
+.item-caption a {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
 	text-decoration: none;
 
 }
 
-.catalog-image-container .catalog-ice {
-	margin-bottom: 15px;
+.item-caption-for-hit {
+	max-width: 256px;
+	min-height:40px;
+	margin-left: 6px;
+	margin-top: 5px;
 }
 
 .item-caption {
-	border-bottom: 1px solid rgba(255,255,255,.1);
+	max-width: 256px;
+	min-height:40px;
+	margin-left: 5px;
 }
 
-.catalog-item:hover .item-caption {
-	border-bottom: none;
-}
-
-.item-button {
-	display: none;
+.catalog-image-container .catalog-ice {
+	margin-bottom: 2px;
 }
 
 /* Инфо магазина */
@@ -909,7 +926,7 @@ input[type=password]:focus + label {
 	height: 307px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: -8px;
+	margin-top: -12px;
 }
 
 .info-about-us {
@@ -920,8 +937,8 @@ input[type=password]:focus + label {
 }
 
 .info-caption {
-	padding-left: 20px;
-	padding-top: 26px;
+	padding-left: 23px;
+	padding-top: 24px;
 }
 
 .info-about-us .features {
@@ -1047,8 +1064,8 @@ input[type=password]:focus + label {
 	width: 285px;
 	font-size: 24px;
 	line-height: 30px;
-	margin-left: 19px;
-    margin-top: -9px;
+	margin-left: 20px;
+    margin-top: -11px;
 	color: #323232;
 	align-content: center;
 	text-decoration: underline;
@@ -1056,7 +1073,6 @@ input[type=password]:focus + label {
 
 .news a:hover,
 .news a:active {
-	text-decoration: none;
 	color: #e84d37;
 }
 
@@ -1085,29 +1101,30 @@ input[type=password]:focus + label {
 	margin-bottom: 40px;
 }
 
-.subscription input {
+.input-subscription {
 	width: 369px;
 	height: 44px;
+	margin-top: 21px;
+	margin-left: 1px;
 	box-sizing: border-box;
 }
 
 .subscription-form button {
-    box-sizing: border-box;
     width: 129px;
+    padding: 0px;
     margin-top: 17px;
-    padding: 10px 15px;
-    margin-top: 21px;
+    margin-right: 0px;
     vertical-align: top;
     font-style: 18px;
     line-height: 24px;
     font-weight: 700;
 }
 
-.input-subscription span {
+.label-subscription {
 	position: absolute;
-	display: block;
-	top: 0px;
-	left: -15px;
+	visibility: hidden;
+	top: 7px;
+	left: 15px;
 	color: rgba(91, 157, 223, 1);
 	font-size: 11px;
 	line-height: 13px;
@@ -1115,8 +1132,8 @@ input[type=password]:focus + label {
 	white-space: nowrap;
 }
 
-.input-subscription {
-	visibility: hidden;
+.input-subscription:focus + label {
+	visibility: visible;
 }
 
 .map {
@@ -1130,8 +1147,8 @@ input[type=password]:focus + label {
 
 .map-pin {
 	position: absolute;
-	top: 140px;
-	left: 314px;
+	top: 160px;
+	left: 290px;
 }
 
 .map .map-container {
@@ -1151,7 +1168,7 @@ input[type=password]:focus + label {
 	background: #ffffff;
 	border-radius: 15px;
 	padding: 28px 40px;
-	margin-top: -21px;
+	margin-top: -25px;
 }
 
 .button-feedback {
@@ -1210,7 +1227,7 @@ input[type=password]:focus + label {
 }
 
 .button-feedback {
-	margin-top: 20px;
+	margin-top: 21px;
 }
 
 /* Подвал */
@@ -1239,7 +1256,7 @@ input[type=password]:focus + label {
 	align-items: center;
 	width: 32px;
 	height: 32px;
-	margin-top: 40px;
+	margin-top: 37px;
     margin-left: 14px;
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(255,255,255,.6), inset 0 0 0 1px rgba(255,255,255,.6);
@@ -1258,7 +1275,7 @@ input[type=password]:focus + label {
     padding: 0;
     list-style-type: none;
     margin-left: 30px;
-    margin-top: 36px;
+    margin-top: 32px;
     width: 300px;
     font-size: 13px;
     line-height: 16px;
@@ -1274,18 +1291,23 @@ input[type=password]:focus + label {
 	color: #ffffff;
 }
 
+.footer-docs a:hover,
+.footer-docs a:active {
+	color: #ffbc9e;
+}
+
 .footer-menu li:nth-child(2) {
 	margin-top: 0px;
 	margin-left: 33px;
 }
 
 .footer-menu-2 li:nth-child(1) {
-	margin-top: -33px;
+	margin-top: -27px;
 	margin-left: 2px;
 }
 
 .footer-menu-2 li:nth-child(2) {
-	margin-top: -33px;
+	margin-top: -27px;
 	margin-left: 43px;
 }
 
@@ -1297,7 +1319,7 @@ input[type=password]:focus + label {
 .heart::before {
     content: "❤";
     position: absolute;
-    left: -21px;
+    left: -22px;
     font-weight: medium;
     font-size: 16px;
 }
@@ -1307,7 +1329,7 @@ input[type=password]:focus + label {
 }
 
 .copyright {
-    margin-top: 16px;
+    margin-top: 13px;
     margin-left: 25px;
 }
 
@@ -1327,6 +1349,12 @@ input[type=password]:focus + label {
 	text-decoration: underline;
 }
 
+.copyright a:hover,
+.copyright a:active {
+	color: #ffbc9e;
+	text-decoration: underline;
+}
+
 /* ----------------Страница каталога--------------------- */
 
 .button-user {
@@ -1340,8 +1368,14 @@ input[type=password]:focus + label {
 	height: 32px;
 }
 
-.head-basket span {
-	margin-left: 14px;
+.head-basket-catalog span {
+	color: #ffffff;
+	margin-left: 13px;
+}
+
+.head-basket-catalog:hover span {
+	color: #000000;
+	margin-left: 13px;
 }
 
 .button-full-basket {
@@ -1364,21 +1398,21 @@ input[type=password]:focus + label {
 }
 
 .button-full-basket:hover {
-	color: #000;
 	background-color: #fff;
 }
 
 .basket-table-window {
 	display: flex;
 	position: absolute;
-	right: 0;
+	right: 0px;
 	padding-top: 10px;
 	visibility: hidden;
 	pointer-events: none;
 	transform: scale(0.8);
 	opacity: 0;
 	transition: all 150ms ease-out;
-	max-width: 540px;
+	width: 540px;
+	height: 215px;
 	box-shadow: 0 20px 20px rgba(0,0,0,.4);
 	z-index: 20;
 }
@@ -1392,9 +1426,9 @@ input[type=password]:focus + label {
 }
 
 .basket-window-form {
-	width: 540px;
+	width: 516px;
 	height: 230px;
-	margin-left: 30px;
+	margin-left: 24px;
 }
 
 .button-full-basket:hover + .basket-table-window,
@@ -1414,6 +1448,7 @@ input[type=password]:focus + label {
 .basket-table {
 	width: 510px;
 	margin-top: 15px;
+	margin-left: -12px;
 	font-size: 13px;
 	line-height: 16px;
 	font-weight: normal;
@@ -1430,17 +1465,13 @@ input[type=password]:focus + label {
 	margin-left: 310px;
 }
 
-.button-offer {
-	margin-top: 10px;
-}
-
 .basket-close-button {
 	width: 11px;
     height: 11px;
     font-size: 0;
-    background: url(../img/close-X.png);
+    background: url(../img/close-X.png) no-repeat;
 	margin-bottom: 11px;
-    margin-left: -15px;
+    margin-left: -2px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -1449,6 +1480,7 @@ input[type=password]:focus + label {
 .head-basket b {
 	font-size: 15px;
 	line-height: 18px;
+	margin-right: 12px;
 	color: #323232;
 }
 
@@ -1491,6 +1523,10 @@ input[type=password]:focus + label {
 	line-height: 16px;
 	font-weight: normal;
 	color: #ffffff;
+}
+
+.breadcrumbs a:hover {
+	color: #ffbc9e;
 }
 
 .breadcrumbs li:nth-child(1),
@@ -1703,11 +1739,11 @@ input[type=password]:focus + label {
 }
 
 .more-thirty {
-	margin-right: -20px;
+	margin-right: -24px;
 }
 
 .zero {
-	margin-left: -6px;
+	margin-left: -4px;
 }
 
 .radio-container input {
@@ -1726,6 +1762,13 @@ input[type=password]:focus + label {
     background: url(../img/radio-off.svg);
     background-repeat: no-repeat;
 }
+
+/*
+.radio-block {
+	opacity: 0.3;
+	cursor: default;
+}
+*/
 
 .radio-container input:checked ~ .radio-checkmark {
     background: url(../img/radio-on.svg);
@@ -1774,7 +1817,7 @@ input[type=password]:focus + label {
 }
 
 .box-chokolate {
-	margin-left: -20px;
+	margin-left: -19px;
 }
 
 .box-fruit {
@@ -1782,11 +1825,11 @@ input[type=password]:focus + label {
 }
 
 .box-syrup {
-	margin-right: -3px;
+	margin-right: -2px;
 }
 
 .box-jam {
-	margin-right: -11px;
+	margin-right: -12px;
 }
 
 .box-container input {
@@ -1805,6 +1848,13 @@ input[type=password]:focus + label {
     background: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
 }
+
+/*
+.box-block {
+	opacity: 0.3;
+	cursor: default;
+}
+*/
 
 .box-container input:checked ~ .box-checkmark {
     background: url(../img/checkbox-on.svg);
@@ -1873,7 +1923,6 @@ input[type=password]:focus + label {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: medium;
-	text-decoration: underline;
 }
 
 .catalog-image-container img {
@@ -1888,9 +1937,9 @@ input[type=password]:focus + label {
 	display: flex;
 	justify-content: flex-end;
 	width: 1146px;
-	padding: 0;
+	padding: 0px;
 	padding-bottom: 19px;
-	margin-left: 5px;
+	margin-left: 10px;
 	margin-top: 32px;
 	list-style-type: none;
 	font-size: 16px;
@@ -1901,29 +1950,35 @@ input[type=password]:focus + label {
 
 .pagination-list a {
 	position: relative;
-	padding: 0 10px;
+	margin-left: 3px;
+	padding: 3px 9px 3px 9px;
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: medium;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 .pagination-item-current a {
 	color: black;
-	z-index: 1;
+	margin-left: 3px;
+	padding: 3px 9px 3px 9px;
+	background-color: white;
+	border-radius: 50%;
 }
 
-.pagination-item-current a::before {
-	content: "";
-	position: absolute;
-	top: -3px;
-	left: 2px;
-	width: 26px;
-	height: 26px;
-	background: white;
+.pagination-click a:hover {
+	margin-left: 3px;
+	padding: 3px 9px 3px 9px;
 	border-radius: 50%;
-	z-index: -1;
+	background: #9db1a5;
+}
+
+.pagination-click a:active {
+	margin-left: 3px;
+	padding: 3px 9px 3px 9px;
+	border-radius: 50%;
+	background: #ffffff;
+	color: #000000;
 }
 
 .not-active {
@@ -1957,7 +2012,7 @@ input[type=password]:focus + label {
 	display: none;
 }
 
-textarea {
+.input-text-feedback {
 	height: 155px;
 	margin-top: -10px;
 }
@@ -1995,13 +2050,71 @@ textarea {
 
 .feedback-form {
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	margin-top: -20px;
 }
 
-.email-feedback {
+.input-email-feedback {
 	width: 267px;
 	margin-top: -20px;
+}
+
+.label-user-feedback {
+	position: absolute;
+	top: 1px;
+	left: 15px;
+	visibility: hidden;
+	color: rgba(91, 157, 223, 1);
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: medium;
+}
+
+.input-user-feedback:focus + label {
+	visibility: visible;
+}
+
+.input-user-feedback:valid:focus + label {
+	color: #999999;
+}
+
+.label-email-feedback {
+	position: absolute;
+	top: 67px;
+	left: 15px;
+	visibility: hidden;
+	color: rgba(91, 157, 223, 1);
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: medium;
+}
+
+.input-email-feedback:focus + label {
+	visibility: visible;
+}
+
+.input-email-feedback:valid:focus + label {
+	color: #999999;
+}
+
+.label-text-feedback {
+	position: absolute;
+	top: 132px;
+	left: 11px;
+	visibility: hidden;
+	color: rgba(91, 157, 223, 1);
+	font-size: 11px;
+	line-height: 13px;
+	font-weight: medium;
+}
+
+.input-text-feedback:focus + label {
+	visibility: visible;
+}
+
+.input-text-feedback:valid:focus + label {
+	color: #999999;
 }
 
 .btn-fb {
