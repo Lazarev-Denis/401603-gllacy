@@ -6,6 +6,7 @@
     	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     	<link href="css/normalize.css" rel="stylesheet">
     	<link href="css/style.css" rel="stylesheet">
+    	
   	</head>
  	<body>
 	<input type="radio" id="btn-1" name="toggle" checked>
@@ -229,9 +230,10 @@
 			</div>
 			<section class="map">
 				<h2 class="visually-hidden">Мы на карте.</h2>
-				<div class="map-pin">
+				<iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680.61413447991!2d30.324063308127236!3d59.93880775551158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1511733490363" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<!--<div class="map-pin">
 					<img src="img/pin-shadow.png" alt="Мы тут">
-				</div>
+				</div>-->
 				<div class="map-container">
 					<div class="info-map">
 						<p>Адрес главного офиса<br>
@@ -287,14 +289,14 @@
 				<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
 						<input class="input-user-feedback" id="user-feedback"  type="text" name="name" placeholder="Как вас зовут?" required>
-							<label class="label-user-feedback" for="user-ffedback">Как вас зовут?</label>
+							<label class="label-user-feedback" for="user-feedback">Как вас зовут?</label>
 					</p>
 					<p>
 						<input class="input-email-feedback" id="email-feedback" type="email" name="email" placeholder="Ваша почта для ответа?" required>
 							<label class="label-email-feedback" for="email-feedback">Ваша почта для ответа?</label>
 					</p>
 					<p>
-						<textarea class="input-text-feedback" id="feedback-question" rows="10" cols="45" type="text" name="text" placeholder="Напишите что-нибудь..." required></textarea>
+						<textarea class="input-text-feedback" id="feedback-question" rows="10" cols="45" name="text" placeholder="Напишите что-нибудь..." required></textarea>
 							<label class="label-text-feedback" for="feedback-question">Напишите что-нибудь...</label>
 					</p>
 					<p><button class="button btn-fb" type="submit">Отправить</button></p>
@@ -303,58 +305,7 @@
 		</section>
 	</div>
 
-	<script>
-		var link = document.querySelector(".button-feedback");
-
-		var popup = document.querySelector(".modal-feedback");
-		var close = popup.querySelector(".modal-close");
-
-		var form = popup.querySelector("form");
-		var login = popup.querySelector("[name=name]");
-		var email = popup.querySelector("[name=email]");
-		var text = popup.querySelector("[name=text");
-
-		var storage = localStorage.getItem("login");
-
-		link.addEventListener("click", function (evt) {
-			evt.preventDefault();
-			popup.classList.add("modal-show");
-
-			if (storage) {
-				login.value = storage;
-				email.focus();
-			} else {
-				login.focus();
-			}
-		});
-
-		close.addEventListener("click", function (evt){
-			evt.preventDefault();
-			popup.classList.remove("modal-show");
-			popup.classList.remove("modal-error");
-		});
-
-		form.addEventListener("submit", function (evt) 
-			{
-			if (!login.value || !email.value || !text.value) {
-				evt.preventDefault();
-				popup.classList.remove("modal-error");
-      			popup.offsetWidth = popup.offsetWidth;
-				popup.classList.add("modal-eror");
-			} else {
-				localStorage.setItem("login", login.value);
-			}
-		});
-
-		  window.addEventListener("keydown", function (evt) {
-    		if (evt.keyCode === 27) {
-      			if (popup.classList.contains("modal-show")) 
-      			{
-        		popup.classList.remove("modal-show");
-        		popup.classList.remove("modal-error");
-      			}
-    		}
-  		});
-	</script>
+	<script src="js/modal"></script>
+	
   	</body>
 </html>
