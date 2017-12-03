@@ -43,7 +43,7 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
-    font-weight: medium;
+    font-weight: normal;
 }
 
 /* Скрыть заголовки доступно */
@@ -397,6 +397,7 @@ li .active-nav {
 
 .button-search {
     display: flex;
+    position: relative;
     width: 32px;
     height: 32px;
     background-color: rgba(255,255,255,.2);
@@ -420,14 +421,20 @@ li .active-nav {
 }
 
 .search-window {
-    width: 342px;
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-search:hover + .search-window,
+.button-search:focus + .search-window,
+.search-window:hover {
+    display: block;
     position: absolute;
+    width: 342px;
     right: 0px;
     padding-top: 10px;
-    display: block;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
     border-radius: 10px;
@@ -435,21 +442,14 @@ li .active-nav {
 }
 
 .search-window-content {
+    display: block;
+    position: relative;
+    visibility: visible;
     height: 60px;
     background-color: rgba(248,247,244,1);
     padding: 15px;
     padding-top: 1px;
     border-radius: 10px;
-}
-
-.button-search:hover + .search-window,
-.button-search:focus + .search-window,
-.search-window:hover,
-.search-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .input-search {
@@ -470,10 +470,6 @@ li .active-nav {
 .input-search:hover {
     padding: 9px 13px;
     border: 2px solid rgba(154,154,154,.52);
-}
-
-.search-window-content {
-    position: relative;
 }
 
 .label-search {
@@ -524,17 +520,22 @@ li .active-nav {
 }
 
 .user-window {
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-user:hover + .user-window,
+.button-user:focus + .user-window,
+.user-window:hover {
     display: flex;
     justify-content: space-between;
     position: absolute;
     right: 0px;
     padding-top: 10px;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
-    max-width: 342px;
+    width: 278px;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
     border-radius: 10px;
     z-index: 20;
@@ -562,16 +563,6 @@ li .active-nav {
     height: 45px;
     margin-top: 20px;
     margin-left: 20px;
-}
-
-.button-user:hover + .user-window,
-.button-user:focus + .user-window,
-.user-window:hover,
-.user-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .label-email {
@@ -1430,14 +1421,19 @@ a.tel {
 }
 
 .basket-table-window {
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-full-basket:hover + .basket-table-window,
+.button-full-basket:focus + .basket-table-window,
+.basket-table-window:hover {
     display: flex;
     position: absolute;
     right: 0px;
     padding-top: 10px;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
     width: 540px;
     height: 215px;
@@ -1457,16 +1453,6 @@ a.tel {
     width: 516px;
     height: 230px;
     margin-left: 24px;
-}
-
-.button-full-basket:hover + .basket-table-window,
-.button-full-basket:focus + .basket-table-window,
-.basket-table-window:hover,
-.basket-table-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .head-basket a {
